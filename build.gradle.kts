@@ -19,8 +19,8 @@ dependencies {
     implementation("io.quarkus:quarkus-reactive-routes")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
-    implementation("io.quarkus:quarkus-rest")
     implementation("io.quarkus:quarkus-config-yaml")
+    implementation("io.quarkus:quarkus-resteasy")
     testImplementation("io.quarkus:quarkus-junit5")
 }
 
