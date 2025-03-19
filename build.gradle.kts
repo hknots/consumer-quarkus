@@ -5,6 +5,7 @@ plugins {
 }
 
 repositories {
+    maven("https://repo.fintlabs.no/releases")
     mavenCentral()
     mavenLocal()
 }
@@ -12,8 +13,16 @@ repositories {
 val quarkusPlatformGroupId: String by project
 val quarkusPlatformArtifactId: String by project
 val quarkusPlatformVersion: String by project
+val fintVersion: String = "3.19.0"
 
 dependencies {
+    implementation ("no.fint:fint-utdanning-resource-model-java:${fintVersion}")
+    implementation ("no.fint:fint-administrasjon-resource-model-java:${fintVersion}")
+    implementation ("no.fint:fint-personvern-resource-model-java:${fintVersion}")
+    implementation ("no.fint:fint-okonomi-resource-model-java:${fintVersion}")
+    implementation ("no.fint:fint-ressurs-resource-model-java:${fintVersion}")
+    implementation ("no.fint:fint-arkiv-resource-model-java:${fintVersion}")
+
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
     implementation("io.quarkus:quarkus-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
