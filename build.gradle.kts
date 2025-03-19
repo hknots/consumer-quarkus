@@ -16,11 +16,10 @@ val quarkusPlatformVersion: String by project
 dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
     implementation("io.quarkus:quarkus-kotlin")
-    implementation("io.quarkus:quarkus-reactive-routes")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-config-yaml")
-    implementation("io.quarkus:quarkus-resteasy")
+    implementation("io.quarkus:quarkus-resteasy-mutiny")
     testImplementation("io.quarkus:quarkus-junit5")
 }
 
