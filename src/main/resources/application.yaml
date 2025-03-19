@@ -1,0 +1,8 @@
+fint:
+  consumer:
+    domain: utdanning
+    pkg: elev
+
+quarkus:
+  resteasy:
+    path: ${fint.consumer.domain}/${fint.consumer.pkg}
